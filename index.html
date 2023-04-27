@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Complaint Tracker</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body onload="getComplains()">
+    <div class="container">
+        <h1 class="p-4 text-center">Complaints Tracker </h1>
+        <div class="container-fluid text-sm p-5 bg-light text-gray ">
+            <h3>Add New Complaint</h3>
+            <form action="" id="complaintform">
+                <div class="mb-3">
+                    <label for="DescInput">
+                        Description
+                    </label>
+                    <input type="text" class="form-control"
+                    id="DescInput" placeholder="Describe the complaint">
+                </div>
+                <div class="mb-3">
+                    <label for="SevInput">
+                        Severity
+                    </label>
+                    <select class="form-control" id="SevInput">
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="AssignedToInput">
+                        Assigned To
+                    </label>
+                    <input type="text" class="form-control"
+                    id="AssignedToInput" placeholder="Assigned to..">
+                </div>
+                <button type="submit" class="btn btn-success">Submit</button>
+            </form>
+        </div>
+        
+        <div class="container-fluid p-4">
+            <h3>Complaints List</h3>
+            
+            <div class="display">
+                <table class="table table-striped" id="complaintList" >
+                    <thead>
+                      <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Desc</th>
+                        <th scope="col">Severity</th>
+                        <th scope="col">Assigned To</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody id="complaintbody" >
+                      
+                    </tbody>
+                  </table>
+            </div>
+            </div>
+        <div class="footer">
+            <p>&copy; coding with Raneem</p>
+        </div>
+    </div>
+    <script src="https://chancejs.com/chance.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script> 
+    <script src="main.js"></script>
+       
+</body>
+</html>
